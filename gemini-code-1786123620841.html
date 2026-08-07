@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivakasi Crackers | Premium Fireworks</title>
+    <meta name="description" content="Premium fireworks from Sivakasi. Order online via WhatsApp.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>🎇 SIVAKASI CRACKERS</h1>
+            <a href="https://wa.me/917904216920" class="contact-header" target="_blank">📞 7904216920</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Premium Fireworks from Sivakasi</h2>
+            <p>100% Quality. 100% Fun. Happy and Safe Diwali to All.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">SHOP NOW</a>
+                <a href="#products" class="btn btn-secondary">VIEW PRODUCTS</a>
+            </div>
+            <div class="terms-banner">
+                <span>📍 Tamil Nadu Orders: Min ₹3,000</span>
+                <span>📍 Other States: Min ₹5,000</span>
+                <span>📦 Packing: ₹100 | 🧾 GST: 18% (Outside TN)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Search & Filter -->
+        <div class="controls-section">
+            <input type="text" id="searchInput" placeholder="🔍 Search products...">
+            <div class="category-scroll" id="categoryTabs">
+                <!-- Categories injected by JS -->
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="products" class="product-grid">
+            <!-- Products injected by JS -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>SIVAKASI CRACKERS</h2>
+            <p>Premium Fireworks from Sivakasi</p>
+            <p>WhatsApp: 7904216920</p>
+            <hr>
+            <div class="footer-terms">
+                <p>Tamil Nadu Minimum Order: ₹3,000</p>
+                <p>Other States Minimum Order: ₹5,000 + 18% GST</p>
+                <p>Packing Charges: ₹100</p>
+            </div>
+            <p class="safety-notice">⚠️ Please burst crackers responsibly and safely in open spaces.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button -->
+    <button id="floatingCartBtn" class="floating-cart">
+        🛒 Cart (<span id="cartCount">0</span>) - ₹<span id="cartTotalBtn">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeCart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items injected by JS -->
+            </div>
+            
+            <div class="checkout-section">
+                <h3>Order Details</h3>
+                <form id="checkoutForm">
+                    <input type="text" id="custName" placeholder="Full Name" required>
+                    <input type="tel" id="custMobile" pattern="[0-9]{10}" placeholder="10-digit Mobile Number" required>
+                    <input type="text" id="custAddress" placeholder="Delivery Address" required>
+                    <input type="text" id="custCity" placeholder="City" required>
+                    <input type="text" id="custPincode" pattern="[0-9]{6}" placeholder="6-digit Pincode" required>
+                    
+                    <select id="custState" required>
+                        <option value="">Select State</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                </form>
+
+                <div class="summary-box">
+                    <h4>ORDER SUMMARY</h4>
+                    <div class="summary-line"><span>Product Subtotal</span> <span id="summarySubtotal">₹0</span></div>
+                    <div class="summary-line"><span>Packing Charges</span> <span>₹100</span></div>
+                    <div class="summary-line" id="gstRow" style="display:none;"><span>GST (18%)</span> <span id="summaryGST">₹0</span></div>
+                    <hr>
+                    <div class="summary-line total"><span>GRAND TOTAL</span> <span id="summaryGrandTotal">₹0</span></div>
+                </div>
+
+                <div id="minOrderWarning" class="warning-msg" style="display:none;"></div>
+
+                <button type="button" id="confirmOrderBtn" class="btn btn-whatsapp" disabled>
+                    📱 CONFIRM ORDER ON WHATSAPP
+                </button>
+                <button type="button" id="continueShoppingBtn" class="btn btn-secondary" style="width: 100%; margin-top: 10px;">
+                    CONTINUE SHOPPING
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content text-center">
+            <h1>🎉</h1>
+            <h2>ORDER READY</h2>
+            <p>Thank you for choosing SIVAKASI CRACKERS</p>
+            <p>Order ID: <strong id="successOrderId"></strong></p>
+            <p>Grand Total: <strong id="successTotal"></strong></p>
+            <a id="successWhatsAppBtn" href="#" class="btn btn-whatsapp mt-20" target="_blank">📱 CONFIRM ORDER ON WHATSAPP</a>
+            <button id="successContinueBtn" class="btn btn-secondary mt-20">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
