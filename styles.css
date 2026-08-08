@@ -38,7 +38,49 @@ h1 { color: var(--gold); font-size: 1.5rem; text-shadow: 0 0 10px rgba(212, 175,
 .product-grid { max-width: 1200px; margin: 0 auto 100px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
 .product-card { background: var(--bg-card); border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; display: flex; flex-direction: column; transition: transform 0.2s; }
 .product-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-.product-img-placeholder { height: 100px; background: #222; border-radius: 8px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+.product-img-placeholder { 
+    height: 140px; 
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); 
+    border: 1px solid #333;
+    border-radius: 8px; 
+    margin-bottom: 12px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adds a subtle gold glow effect to the top of the placeholder */
+.product-img-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+
+.placeholder-text {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .product-cat { font-size: 0.75rem; color: var(--gold); text-transform: uppercase; }
 .product-name { font-size: 1rem; margin: 5px 0; flex-grow: 1; }
 .product-pack { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 5px; }
