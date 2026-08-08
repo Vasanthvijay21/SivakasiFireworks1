@@ -47,6 +47,21 @@ function init() {
     });
 }
 
+function getCategoryIcon(category) {
+    const icons = {
+        'Sky Riders': '🚀',
+        'Multiple Skyriders': '🌠',
+        'Hand Sparklers': '✨',
+        'Flower Pots': '🪴',
+        'Magical Spinner': '🌀',
+        'Kids World': '🧸',
+        'Sound Blaster': '🔊',
+        'Paper Sound Blaster': '📄',
+        'Multiple Sound Blaster': '🧨'
+    };
+    return icons[category] || '🎆';
+}
+
 function renderCategories() {
     categoryTabs.innerHTML = categories.map(cat => 
         `<button class="cat-btn ${cat === currentCategory ? 'active' : ''}" onclick="setCategory('${cat}')">${cat}</button>`
@@ -74,7 +89,10 @@ function renderProducts() {
         
         return `
         <div class="product-card">
-            <div class="product-img-placeholder">🎆</div>
+            <div class="product-img-placeholder">
+    <span class="placeholder-icon">${getCategoryIcon(p.category)}</span>
+    <span class="placeholder-text">${p.name}</span>
+</div>
             <span class="product-cat">${p.category}</span>
             <h3 class="product-name">${p.name}</h3>
             <span class="product-pack">Pack: ${p.pack}</span>
