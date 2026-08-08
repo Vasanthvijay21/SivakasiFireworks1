@@ -34,6 +34,13 @@ function init() {
     // Form Inputs Trigger Recalculation/Validation
     checkoutForm.addEventListener('input', calculateTotals);
     confirmOrderBtn.addEventListener('click', handleCheckout);
+    
+    // ✨ THE FIX: Event listener for the Cart's Continue Shopping button ✨
+    document.getElementById('continueShoppingBtn').addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+
+    // Event listener for the Success Modal's Continue Shopping button
     document.getElementById('successContinueBtn').addEventListener('click', () => {
         document.getElementById('successModal').style.display = 'none';
         cartModal.style.display = 'none';
