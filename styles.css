@@ -26,6 +26,59 @@ h1 { color: var(--gold); font-size: 1.5rem; text-shadow: 0 0 10px rgba(212, 175,
 .hero-buttons { margin: 20px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 .terms-banner { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); }
 
+/* Hero Title & Offer Banners */
+.hero-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the banners and the text */
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allows safe wrapping on smaller screens */
+}
+
+/* Override the default margin on the h2 since the container handles spacing */
+.hero-title-container h2 {
+    margin-bottom: 0;
+}
+
+.offer-banner {
+    background: linear-gradient(135deg, #d32f2f 0%, #9a0007 100%); /* Deep premium red */
+    color: var(--text-light);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    white-space: nowrap; /* Prevents the text from breaking into two lines */
+    animation: gold-pulse 2s infinite; /* Adds a premium glow effect */
+}
+
+/* Glowing Animation */
+@keyframes gold-pulse {
+    0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+    50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.4); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-title-container {
+        gap: 10px;
+        flex-direction: column; /* Stacks the banners and text on mobile */
+    }
+    
+    /* Hide the second banner on mobile to keep the screen uncluttered */
+    .hero-title-container .offer-banner:last-child {
+        display: none; 
+    }
+    
+    .offer-banner {
+        font-size: 0.9rem;
+        padding: 4px 12px;
+    }
+}
+
 /* Controls */
 .controls-section { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
 #searchInput { width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--gold); background: var(--bg-card); color: white; font-size: 1rem; margin-bottom: 15px; }
