@@ -181,10 +181,10 @@ function calculateTotals() {
     
     // Exact rules requested
     if (state === 'Tamil Nadu') {
-        minimum = 3000; //[cite: 1]
+        minimum = 5000; //[cite: 1]
         document.getElementById('gstRow').style.display = 'none';
     } else if (state) {
-        minimum = 5000; //[cite: 1]
+        minimum = 10000; //[cite: 1]
         gst = Math.round(subtotal * 0.18);
         document.getElementById('gstRow').style.display = 'flex';
     }
@@ -214,8 +214,8 @@ function validateCheckout(subtotal, minimum) {
         warningMsg.style.display = 'block';
         const diff = minimum - subtotal;
         warningMsg.innerText = state === 'Tamil Nadu' 
-            ? `Please add ₹${diff} more to reach the minimum order value of ₹3,000.`
-            : `Please add ₹${diff} more to reach the minimum order value of ₹5,000 for orders outside Tamil Nadu.`;
+            ? `Please add ₹${diff} more to reach the minimum order value of ₹5,000.`
+            : `Please add ₹${diff} more to reach the minimum order value of ₹10,000 for orders outside Tamil Nadu.`;
         confirmOrderBtn.disabled = true;
     } else if (!formValid) {
         warningMsg.style.display = 'block';
